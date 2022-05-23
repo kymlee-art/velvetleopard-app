@@ -111,7 +111,7 @@
           color="grey darken-3"
 
         >
-          Send
+          Submit
         </v-btn>
       </v-card-actions>
       <v-dialog
@@ -161,13 +161,12 @@
 
 <script>
    export default {
-     name: 'ContactView',
+     name: 'Contact',
     data () {
     return {
-      name: ContactView,
+      name: Contact,
 
     }
   },
    }
 </script>
-
