@@ -1,5 +1,5 @@
 <template>
-  <v-carousel>
+  <v-carousel hide-delimiters>
     <v-carousel-item
       v-for="(item,i) in items"
       :key="i"
@@ -12,7 +12,7 @@
       <v-card-text class="text-center">
         <v-row>
           <v-col>
-            <h2>BOLD</h2>
+            <h2 class="mt-6 pt-6">BOLD</h2>
             <p class="bold">
               Creatively Different</p></v-col></v-row>
       </v-card-text>
@@ -20,6 +20,7 @@
 
           <v-row>
             <v-col>
+
           <Buy class="mx-auto"></Buy></v-col>
           <v-col>
           <DialogTry class="mx-auto"></DialogTry></v-col>
@@ -38,20 +39,38 @@
       return {
         items: [
           {
-            src: '../assets/earings/ear2.png', alt:"earings",
+            src: require('../assets/earings/earing1.png'),
           },
           {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
+            src: require('../assets/earings/earing2.png'),
           },
           {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
+            src: require('../assets/earings/earing3.png'),
+          },
+           {
+            src: require('../assets/earings/earing4.png'),
           },
           {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
+            src: require('../assets/earings/earing5.png'),
           },
+           {
+            src: require('../assets/earings/earing6.png'),
+          },
+           {
+            src: require('../assets/earings/earing7.png'),
+          },
+
         ],
 
       }
     },
   }
 </script>
+<style scoped>
+.v-carousel__controls{
+  background-color: white;
+}
+.v-item-group{
+  color: black;
+}
+</style>

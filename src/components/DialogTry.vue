@@ -2,14 +2,16 @@
       <v-dialog
       class="DialogTry"
         v-model="dialog"
-        width="500"
+        width="300"
+         height="300"
       >
         <template v-slot:activator="{ on, attrs }">
           <v-btn
-            color="teal accent-2"
+            color="grey darken-2"
             dark
             v-bind="attrs"
             v-on="on"
+            width="70"
           >
            Try On
           </v-btn>
@@ -17,16 +19,17 @@
 
        <v-card
         style="opacity: 0.8"
-        color="teal lighten-2"
+        color="grey lighten-2"
         class="mx-auto"
+        width="400"
         height="300"
-        width="300"
+
          centered
 
          >
           <v-img
-          height="200px"
-          width="200px"
+          height="150px"
+          width="150px"
           class="mx-auto buy-logo"
           src='../assets/velvet leopard.png'
           alt="logo">

@@ -2,14 +2,15 @@
       <v-dialog
       class="Buy"
         v-model="dialog"
-        width="400"
+        width="300"
       >
         <template v-slot:activator="{ on, attrs }">
           <v-btn
-            color="teal accent-2"
+            color="grey darken-2"
             dark
             v-bind="attrs"
             v-on="on"
+               width="70"
           >
            Buy
           </v-btn>
@@ -17,7 +18,7 @@
 
         <v-card
         style="opacity: 0.8"
-        color="teal lighten-2"
+        color="grey lighten-2"
         class="mx-auto"
         height="300"
          centered

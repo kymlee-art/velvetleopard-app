@@ -3,6 +3,8 @@
      <v-navigation-drawer
      v-model="drawer"
      app
+     class="hidden-md-and-up"
+
      >
       <v-list-item>
         <v-list-item-content>
@@ -47,7 +49,9 @@
       dense
       flat
     >
-      <v-app-bar-nav-icon @click="drawer=!drawer"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon
+      class="hidden-md-and-up"
+      @click="drawer=!drawer"></v-app-bar-nav-icon>
       <v-spacer></v-spacer>
 
       <v-tab class="pa-4 font-weight-black"
@@ -81,7 +85,7 @@
 
 
 <!-- CART BUTTON / DIALOG POPUP -->
-<Cart <v-btn icon>
+<Cart ><v-btn icon>
         <v-icon
         >mdi-basket-outline</v-icon>
       </v-btn></Cart>

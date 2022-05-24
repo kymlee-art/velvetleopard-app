@@ -165,7 +165,7 @@
     data () {
     return {
       name: ContactView,
-
+      CartView: True,
     }
   },
    }

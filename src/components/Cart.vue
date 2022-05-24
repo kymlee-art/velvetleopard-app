@@ -1,23 +1,34 @@
 <template>
-  <div class="text-center">
+  <div class="text-center"
+  >
   <v-menu
       v-model="menu"
       :close-on-content-click="false"
       :nudge-width="200"
       offset-x
+      class="grey"
+
+
     >
-      <template v-slot:activator="{ on, attrs }">
+      <template v-slot:activator="{ on, attrs }" class="grey">
         <v-icon
-          color="indigo"
+          color="black"
           v-bind="attrs"
           v-on="on"
         >mdi-basket-outline
-        </v-icon> Menu as Popover
+        </v-icon>
       </template>
 
-      <v-card>
-        <v-list>
+      <v-card id="cart-dialog"
+      width="200"
+      height="300"
+      color="grey"
+
+
+      >
+        <v-list class="grey">
           <v-list-item><v-img
+
           src="../assets/velvet leopard.png"></v-img>
           <v-icon></v-icon>
 
@@ -27,39 +38,22 @@
             </v-list-item-content>
 
             <v-list-item-action>
-              <v-btn
-                :class="fav ? 'red--text' : ''"
-                icon
-                @click="fav = !fav"
-              >
-                <v-icon>mdi-heart</v-icon>
-              </v-btn>
+
             </v-list-item-action>
           </v-list-item>
         </v-list>
 
-        <v-divider></v-divider>
 
-        <v-list>
+
+        <v-list class="grey">
           <v-list-item>
             <v-list-item-action>
-              <v-switch
-                v-model="message"
-                color="purple"
-              ></v-switch>
+
             </v-list-item-action>
-            <v-list-item-title>Enable messages</v-list-item-title>
+            <v-list-item-title class="ml-n4">Coming Soon</v-list-item-title>
           </v-list-item>
 
-          <v-list-item>
-            <v-list-item-action>
-              <v-switch
-                v-model="hints"
-                color="purple"
-              ></v-switch>
-            </v-list-item-action>
-            <v-list-item-title>Enable hints</v-list-item-title>
-          </v-list-item>
+
         </v-list>
 
         <v-card-actions>
@@ -76,7 +70,7 @@
             text
             @click="menu = false"
           >
-            Save
+            Buy Now
           </v-btn>
         </v-card-actions>
       </v-card>
@@ -97,3 +91,11 @@
   },
    }
 </script>
+<style scoped>
+.v-menu__content .v-menu, .card-dialog, .v-list-menu{
+  background-color: grey;
+}
+.v-menu__content{
+  background-color:rgba(128, 128, 128, 0.613);
+}
+</style>

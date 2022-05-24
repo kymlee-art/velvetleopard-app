@@ -49,14 +49,26 @@
 
 <!------- CAROUSEL -------------->
 
-        <section id="carousel" class="white mt-2" >
-<Carousel>
-  <v-card>
-  <Buy></Buy>
-  <DialogBuy></DialogBuy>
-  </v-card>
-</Carousel>
+        <section id="carousel" class="white mt-2" height="500" >
+<template>
+          <Carousel></Carousel>
+
+ <v-row
+    align="center"
+    justify="center"
+    class="mb-16 pb-16"
+  >
+          <v-flex class="mx-auto" >
+          <buy id="buy-btn"></buy>
+           </v-flex>
+
+           <v-flex class="mx-auto" >
+          <dialog-try id="try-btn"></dialog-try>
+           </v-flex>
+ </v-row>
+</template>
             </section>
+
 
 <!-- parallax -->
           <v-parallax
@@ -148,7 +160,7 @@
         </v-img>
      <v-card
      id="contact-details"
-     class="#DEBA27 mx-auto pl-16 mt-n16"
+     class="#DEBA27 mx-auto  mt-n16"
      color="#DEBA27"
      flat
      dense
@@ -168,13 +180,15 @@
         </v-col>
       </v-flex>
       <v-flex>
-        <v-col cols="8" >
-          <h2
-          class="text-center mx-auto ml-15 mt-16 pa-16 font-weight-black"
-          justify="center">Get in Touch!</h2>
+        <v-col cols="8" id="contact-col"
+        width="400">
+          <h2 id="contact-h2"
+          class="text-center mx-auto mt-16 font-weight-black"
+          justify="center"
+          >Get in Touch!</h2>
    <v-card
       class="mx-auto  pl-10 pb-16"
-      style="max-width: 600px; min-width: 300px;"
+      style="max-width: 600px; min-width: 350px;"
       color="#DEBA27"
       dense
       flat
@@ -233,15 +247,10 @@
           Clear
         </v-btn>
         <v-spacer></v-spacer>
-        <v-btn
-          v-ripple
-          :loading="isLoading"
-          class="white--text"
-          color="grey darken-3"
 
-        >
-          Submit
-        </v-btn>
+
+        <Send></Send>
+
       </v-card-actions>
       <v-dialog
         v-model="dialog"
@@ -297,12 +306,14 @@ import Carousel from '../components/Carousel.vue'
 import DialogTry from '../components/DialogTry.vue'
 import Buy from '../components/Buy.vue'
 import Video from '../components/Video.vue'
-import MessageDialog from '../components/Video.vue'
 import Cart from '../components/Cart.vue'
+import Send from '../components/Send.vue'
 import AboutView from '../views/AboutView.vue'
 import Footer from '../components/Footer.vue'
 import InfoView from './InfoView.vue'
-import ContactView from './ContactView.vue'
+import Carousel1 from '../components/Carousel1.vue'
+
+
 
 
 
@@ -311,7 +322,17 @@ import ContactView from './ContactView.vue'
 
 
   export default {
-  components: { Carousel, DialogTry, Buy, MessageDialog, Video, AboutView, Footer, Cart, InfoView},
+  components: { Carousel,
+                DialogTry,
+                Buy,
+                Video,
+                AboutView,
+                Footer,
+                Cart,
+                InfoView,
+                Carousel1,
+                Send
+                },
     data () {
       return {
           message: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts',
@@ -387,9 +408,28 @@ import ContactView from './ContactView.vue'
   position: absolute;
 }
 
+.carousel-btn{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 10rem;
+}
+
 .theme--dark.v-btn.v-btn--icon {
     color: #424242;
     width: 20;
+}
+#contact-h2{
+  width: 300px;
+  margin-top: 26px;
+  margin-left: -12rem;
+  font-size: 2rem;
+}
+#contact-details{
+  margin-top: 16rem;
+}
+#contact-col{
+  margin-top: 6rem;
 }
 </style>
 

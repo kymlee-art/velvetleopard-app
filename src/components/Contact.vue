@@ -93,7 +93,7 @@
           solo
         ></v-textarea>
 
-        </v-checkbox>
+
       </v-form>
 
       <v-card-actions>
