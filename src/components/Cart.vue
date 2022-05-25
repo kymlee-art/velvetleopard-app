@@ -84,8 +84,10 @@
      name: 'Cart',
     data () {
     return {
-      name: Cart,
+      title: 'Cart',
       Cart: true,
+      menu: false,
+      title: 'menu',
 
     }
   },

@@ -75,10 +75,6 @@
    export default {
      name: 'InfoView',
     data () {
-    return {
-      name: InfoView,
-
     }
-  },
    }
 </script>
