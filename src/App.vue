@@ -3,12 +3,21 @@
     <v-navigation-drawer v-model="drawer"
                         app
                         disable-resize-watcher
-                        class="d-md-lg-xl-none"
+                        class="grey lighten-2"
+
+
                         >
+                           <v-img
+                class="mx-auto"
+                src="../src/assets/velvet leopard.png"
+                width="100"
+                justify="center">
+
+            </v-img>
       <v-list-item>
-        <v-list-item-content>
+        <v-list-item-content class="mx-auto">
           <v-list-item-title class="text-h6">
-            Velvet Leopard
+
           </v-list-item-title>
           <v-list-item-subtitle> Designs that Attract </v-list-item-subtitle>
         </v-list-item-content>
@@ -30,8 +39,10 @@
     </v-navigation-drawer>
 
     <div>
-      <v-app-bar app color="#DEBA27" dense flat>
+      <v-app-bar app color="#DEBA27" dense flat overflow-hidden class="hidden-sm-and-down">
         <v-app-bar-nav-icon @click="drawer = !drawer"
+
+
                             >
         </v-app-bar-nav-icon>
 
@@ -104,8 +115,8 @@ export default {
       title: 'Cart',
       drawer: false,
       items: [
-        { title: "Home", icon: "mdi-home-outline", to: "/" },
-        { title: "About", icon: "mdi-information-variant", goTo: "#about" },
+        { title: "Home", icon: "mdi-home-outline", goTo: '#home'},
+        { title: "About", icon: "mdi-information-variant", goTo: '/about' },
         { title: "Gallery", icon: "mdi-view-dashboard", goTo: "#gallery" },
         { title: "Contact", icon: "mdi-email-edit-outline", goTo: "#contact" },
       ],

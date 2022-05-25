@@ -39,7 +39,7 @@
           </v-card-title>
 
           <v-card-text>
-          <h3 >Added to Cart</h3>
+          <h6 >Added to Cart</h6>
           </v-card-text>
           <v-divider></v-divider>
 
@@ -66,6 +66,7 @@
     data () {
     return {
      Buy: true,
+     dialog: false,s
 
     }
   },

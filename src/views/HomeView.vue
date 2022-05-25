@@ -49,25 +49,25 @@
 
 <!------- CAROUSEL -------------->
 
-        <section id="carousel" class="white mt-2" height="500" >
-<template>
-          <Carousel></Carousel>
+<section id="carousel" class="white mt-2" height="500" >
+  <template>
+            <Carousel></Carousel>
 
- <v-row
-    align="center"
-    justify="center"
-    class="mb-16 pb-16"
-  >
-          <v-flex class="mx-auto" >
-          <buy id="buy-btn"></buy>
-           </v-flex>
+                <v-row
+                    align="center"
+                    justify="center"
+                    class="mb-16 pb-16"
+                  >
+                    <v-flex class="mx-auto" >
+                      <buy id="buy-btn"></buy>
+                    </v-flex>
 
-           <v-flex class="mx-auto" >
-          <dialog-try id="try-btn"></dialog-try>
-           </v-flex>
- </v-row>
-</template>
-            </section>
+                      <v-flex class="mx-auto" >
+                          <dialog-try id="try-btn"></dialog-try>
+                      </v-flex>
+                </v-row>
+  </template>
+</section>
 
 
 <!-- parallax -->
@@ -96,110 +96,72 @@
 <!------------------- ABOUT------------- -->
 <about-view></about-view>
 
-<!-- Video-->
-<!-- cant seem to get video going -->
-<section id="video" class="mx-auto white">
-
-<v-container>
-  <v-layout>
-    <v-flex> <v-row
-        class="mb-4"
-        no-gutters
-      >
-
-          <v-card
-            class="mx-auto mt-16 ml-8 mr-8 pa-2 text-center"
-
-          >
-            Presenting Velvet Leopard's Motion Graphic Video
-            Show-casing the unqiue and diversive style, for thoose that love to be different!
-
-          </v-card>
-
-     <v-row>
-          <v-card
-            class="pa-2 mx-auto text-center"
-            outlined
-            tile
-          >
-
-          <Video></Video>VIDEO GOES HERE
-          </v-card>
-        </v-row>
-
-        </v-col>
-      </v-row>
-      <v-row no-gutters>
-
-      </v-row></v-flex>
-  </v-layout>
-
-</v-container>
-
-</section>
 
 
-<!-- CONTACT --cannot seemt to import my contact page or component (both same) so I can delete it here---->
+<!------------- CONTACT -------------------->
 
 <section id="contact"
-        class="#DEBA27">
+          class=" mx auto mb-8 #DEBA27"
+          height="600"
+          >
+<v-container>
 
- <v-container class=" ml-0 pa-0 ">
 
-    <v-row no-gutters>
-      <v-flex class="mx-auto">
-         <v-col
 
-         cols="#DEBA27">
-        <v-img
-        class="mx-auto"
-        src="../assets/velvet leopard.png"
-        width="400"
-        justify="center">
+      <v-row>
+ <v-flex xs12 sm6 class="mx-auto">
 
-        </v-img>
-     <v-card
-     id="contact-details"
-     class="#DEBA27 mx-auto  mt-n16"
-     color="#DEBA27"
-     flat
-     dense
-     width="300"
 
-     >
-             <h2>Jacinta Campbell</h2>
-             <p>1133 Delaware Drive Melbourne, Victora 3000</p>
-             <p class="font-weight-black bold">Ph: 03 9333 2222</p>
-             <div  class="d-flex" id="social-icons">
-             <v-icon>mdi-facebook</v-icon>
-             <v-icon>mdi-instagram</v-icon>
-             <v-icon>mdi-linkedin</v-icon>
-             <v-icon>mdi-twitter</v-icon>
-             </div>
-     </v-card>
-        </v-col>
-      </v-flex>
-      <v-flex>
-        <v-col cols="8" id="contact-col"
-        width="400">
-          <h2 id="contact-h2"
-          class="text-center mx-auto mt-16 font-weight-black"
-          justify="center"
-          >Get in Touch!</h2>
+            <v-img
+                class="mx-auto"
+                src="../assets/velvet leopard.png"
+                width="400"
+                justify="center">
+
+            </v-img>
+          <v-card
+              id="contact-details"
+              class="#DEBA27 mx-auto"
+              color="#DEBA27"
+              flat
+              dense
+              width="300"
+
+                >
+            <h2>Jacinta Campbell</h2>
+              <p>1133 Delaware Drive Melbourne, Victora 3000</p>
+                <p class="font-weight-black bold">Ph: 03 9333 2222</p>
+                  <div  class="d-flex" id="social-icons">
+                      <v-icon>mdi-facebook</v-icon>
+                      <v-icon>mdi-instagram</v-icon>
+                      <v-icon>mdi-linkedin</v-icon>
+                      <v-icon>mdi-twitter</v-icon>
+                </div>
+            </v-card>
+
+    </v-flex>
+
+ <v-flex xs12 sm6 class="mx-auto" >
+
+
    <v-card
-      class="mx-auto  pl-10 pb-16"
+    id="form-detail"
+      class="mx-auto  pl-10 mt-16"
       style="max-width: 600px; min-width: 350px;"
       color="#DEBA27"
       dense
       flat
     >
+<h2 id="contact-h2"
+          class="text-center mx-auto mt-16 font-weight-black"
+          justify="center"
+          >Get in Touch!</h2>
 
-        <v-spacer></v-spacer>
 
       <v-form
         ref="form"
         v-model="form"
-        class="pa-4 pt-6"
+        class="pa-4"
         color="#DEBA27"
       >
         <v-text-field
@@ -246,9 +208,6 @@
         >
           Clear
         </v-btn>
-        <v-spacer></v-spacer>
-
-
         <Send></Send>
 
       </v-card-actions>
@@ -287,11 +246,11 @@
         </v-card>
       </v-dialog>
     </v-card>
-
-        </v-col>
+<v-spacer></v-spacer>
+        <!-- </v-col> -->
 </v-flex>
       </v-row>
-  </v-container>
+</v-container>
 </section>
 
 
@@ -311,17 +270,9 @@ import Send from '../components/Send.vue'
 import AboutView from '../views/AboutView.vue'
 import Footer from '../components/Footer.vue'
 import InfoView from './InfoView.vue'
-import Carousel1 from '../components/Carousel1.vue'
-
-
-
-
-
-
-
-
 
   export default {
+name : "message",
   components: { Carousel,
                 DialogTry,
                 Buy,
@@ -330,11 +281,12 @@ import Carousel1 from '../components/Carousel1.vue'
                 Footer,
                 Cart,
                 InfoView,
-                Carousel1,
                 Send
                 },
+                name: "Message",
     data () {
       return {
+        name: "Message",
           message: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts',
           dialog: false,
           email: undefined,
@@ -425,11 +377,15 @@ import Carousel1 from '../components/Carousel1.vue'
   margin-left: -12rem;
   font-size: 2rem;
 }
-#contact-details{
-  margin-top: 16rem;
-}
+
 #contact-col{
   margin-top: 6rem;
+}
+#form-detail{
+  margin-top: 3rem;
+}
+#contact-details{
+  margin-top: -3rem;
 }
 </style>
 
