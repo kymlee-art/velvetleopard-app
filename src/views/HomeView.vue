@@ -1,12 +1,15 @@
 <template>
+
 <v-content id="hero" color= "#DEBA27">
  <v-responsive
     class="mx-auto mb-12"
     width="100vw"
 
   >
+    <v-container
         <v-row no-gutters>
-          <v-img
+
+            <v-img
             display="inline-block"
             height="300"
 
@@ -16,34 +19,19 @@
             alt="logo"
             contain></v-img>
 
-            <v-theme-provider dark>
-              <v-container
-            fill-height
-
-              >
                 <v-row
                   class="black--text mx-auto"
                   justify="center"
 
-                >
-                  <!-- <v-btn
-                    class="align-self-end"
-                    fab
-
-                    font-black
-
-                  > -->
                     <v-icon
                     color="black"
                     x-large
                     @click="$vuetify.goTo('#carousel')"
                     >mdi-chevron-down</v-icon>
-
                 </v-row>
-              </v-container>
-            </v-theme-provider>
-          </v-img>
+
         </v-row>
+        </v-container>
 </v-responsive>
 
 
@@ -78,7 +66,7 @@
           <v-container fill-height>
             <v-row class="mx-auto">
               <v-col
-                :key="title"
+
                 cols="12"
                 md="3"
               >
@@ -189,7 +177,7 @@
           solo
         ></v-text-field>
         <v-textarea
-          v-model="Message"
+          v-model="message"
           auto-grow
           filled
           color="teal accent-2"
@@ -283,11 +271,11 @@ name : "message",
                 InfoView,
                 Send
                 },
-                name: "Message",
+                name: "message",
     data () {
       return {
-        name: "Message",
-          message: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts',
+        name: "message",
+          message: '',
           dialog: false,
           email: undefined,
           form: false,
@@ -300,29 +288,7 @@ name : "message",
             required: v => !!v || 'This field is required',
           },
 
-        // items: [
-        //   {
-        //     src: "../assets/ear2.png",
-        //   },
-        //   {
-        //     src: '../assets/ear3.png',
-        //   },
-        //   {
-        //     src: '../assets/ear4.png',
-        //   },
-        //   {
-        //     src: '../assets/ear5.png',
-        //   },
-        //    {
-        //     src: '../assets/ear6.png',
-        //   },
-        //    {
-        //     src: '../assets/ear7.png',
-        //   },
-        //    {
-        //     src: '../assets/earings/earings1.png',
-        //   },
-        // ],
+
       justify: [
         'start',
         'center',

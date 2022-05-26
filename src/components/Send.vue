@@ -4,7 +4,7 @@
 
         @click="snackbar = true"
          v-ripple
-          :loading="isLoading"
+
           class="white--text"
           color="grey darken-3"
           form action="mailto:kym.nazim@gmail.com" method="post" enctype="text/plain"

@@ -6,27 +6,17 @@
       :src="item.src"
       reverse-transition="fade-transition"
       transition="fade-transition"
-      :height="imageHeight"
+
     >
 
       <v-card-text class="text-center">
         <v-row>
           <v-col>
-            <h2 class="mt-6 pt-6">BOLD</h2>
+            <h2 class="mt-6">BOLD</h2>
             <p class="bold">
               Creatively Different</p></v-col></v-row>
       </v-card-text>
-        <v-card-action class="d-inline pa-2 mx-auto">
-
-          <v-row>
-            <v-col>
-
-          <Buy class="mx-auto"></Buy></v-col>
-          <v-col>
-          <DialogTry class="mx-auto"></DialogTry></v-col>
-           </v-row>
-
-          </v-card-action></v-carousel-item>
+   </v-carousel-item>
 
   </v-carousel>
 </template>
@@ -37,6 +27,7 @@
     name: 'Carousel',
     data () {
       return {
+
         items: [
           {
             src: require('../assets/earings/earing1.png'),

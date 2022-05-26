@@ -75,6 +75,7 @@
    export default {
      name: 'InfoView',
     data () {
+
     }
    }
 </script>

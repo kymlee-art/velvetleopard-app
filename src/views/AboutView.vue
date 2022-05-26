@@ -18,7 +18,7 @@
             dense
              class="ma-16"
             width="500"
-             :elevation="n - 1"
+
           >
           </v-card>
 
@@ -52,7 +52,7 @@
      name: 'AboutView',
     data () {
     return {
-      name: AboutView,
+
 
     }
   },

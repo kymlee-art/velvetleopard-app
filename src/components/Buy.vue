@@ -60,19 +60,18 @@
     </div>
     </template>
 
+
+
 <script>
    export default {
      name: 'Buy',
+     name: 'dialog',
     data () {
     return {
      Buy: true,
-     dialog: false,s
+     dialog: false,
 
     }
   },
    }
 </script>
-
-<style scoped>
-
-</style>
